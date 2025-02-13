@@ -1,0 +1,142 @@
+.blind {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.inner {
+  padding: 0 20px;
+}
+.con-inner {
+  padding: 0 2.5rem;
+}
+
+.group-head {
+  width: 100%;
+  margin-top: 14vw;
+  text-align: right;
+}
+.group-head .headline {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  width: 25%;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--point-color);
+  font-family: Neue Medium;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.category-box {
+  display: flex;
+  gap: 15px;
+  margin: 15px;
+}
+.category-box .cate {
+  padding: 12px 14px;
+  border-radius: 1000px;
+  background-color: #f9f9f9bf;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  color: #000;
+  font-family: Neue Medium;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: default;
+}
+.category-box .cate.cate-point {
+  background-color: white;
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  color: white;
+  font-size: 13vw;
+  font-weight: bold;
+  line-height: 1em;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+.marquee .marquee-wrapper {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.marquee .marquee-wrapper .marquee-slide {
+  margin-right: 6rem;
+}
+
+.bold {
+  font-family: 'Neue Medium';
+}
+
+@media screen and (max-width: 1024px) {
+  .category-box {
+    flex-wrap: wrap;
+  }
+  .category-box .cate {
+    font-size: 16px;
+  }
+  .group-head .headline {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 767px) { 
+  .category-box {
+    gap: 10px;
+    margin: 10px;
+  }
+  .category-box .cate {
+    font-size: 13px;
+  }
+  .group-head .headline {
+    width: 70%;
+    font-size: 30px;
+  }
+  .marquee .marquee-wrapper .marquee-slide {
+    margin-right: 3rem;
+  }
+}
+@media screen and (max-width: 479px) { 
+  .group-head .headline {
+    width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    font-size: 22px;
+  }
+  .marquee .marquee-wrapper .marquee-slide {
+    margin-right: 1rem;
+  }
+  .category-box {
+    gap: 5px;
+  }
+  .category-box .cate {
+    padding: 7px 9px;
+  }
+}
