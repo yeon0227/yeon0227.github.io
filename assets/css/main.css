@@ -355,6 +355,7 @@
 }
 .sc-projectSub .group-content .text-area {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .sc-projectSub .group-content .btn-review {
